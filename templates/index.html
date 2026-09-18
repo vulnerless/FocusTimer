@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FocusTimer</title>
+</head>
+<body>
+  <h1>FocusTimer</h1>
+
+  <p id="mode">work</p>
+  <h2 id="clock">25:00</h2>
+  <button id="start">Start</button>
+  <button id="pause">Pause</button>
+  <button id="reset">Reset</button>
+  <p>Completed pomodoros: <span id="completed">0</span></p>
+
+  <h3>Settings</h3>
+  Work <input id="work" type="number" min="1" max="60" value="25">
+  Break <input id="break" type="number" min="1" max="60" value="5">
+  <button id="save">Save</button>
+  <p id="settings-error"></p>
+
+  <h3>Tasks</h3>
+  <input id="task-title" placeholder="New task">
+  <button id="add-task">Add</button>
+  <p id="task-error"></p>
+  <ul id="tasks"></ul>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
